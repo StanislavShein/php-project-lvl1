@@ -16,4 +16,4 @@ if (file_exists($autoloadPath1)) {
 	require_once $autoloadPath2;
 }
 
-Engine\play('brain-even');
+Engine\play('brain-calc');

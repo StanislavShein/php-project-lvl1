@@ -7,6 +7,9 @@ brain-games: # запуск игры
 brain-even: # запуск игры "Проверка на чётность"
 	./bin/brain-even
 
+brain-calc: # запуск игры "Калькулятор"
+	./bin/brain-calc
+
 validate: # публикация
 	composer validate
 
