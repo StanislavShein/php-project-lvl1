@@ -10,6 +10,9 @@ brain-even: # запуск игры "Проверка на чётность"
 brain-calc: # запуск игры "Калькулятор"
 	./bin/brain-calc
 
+brain-gcd: # запуск игры "Наибольший общий делитель"
+	./bin/brain-gcd
+
 validate: # публикация
 	composer validate
 

@@ -4,6 +4,7 @@ namespace Src\Engine;
 
 use Src\Games\Even;
 use Src\Games\Calc;
+use Src\Games\GCD;
 
 use function cli\line;
 use function cli\prompt;
@@ -20,6 +21,9 @@ function play($game)
 			break;
 		case 'brain-calc':
 			Calc\playBrainCalc($name);
+			break;
+		case 'brain-gcd':
+			GCD\playBrainGCD($name);
 			break;
 	}
 

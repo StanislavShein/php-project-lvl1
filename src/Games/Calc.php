@@ -37,12 +37,9 @@ function playBrainCalc($name)
 			break;
 		}
 
-		
 	} while ($i < 3);
 	if ($i == 3) {
 		line("Congratulations, %s!", $name);
 	}
-
-
 
 }
