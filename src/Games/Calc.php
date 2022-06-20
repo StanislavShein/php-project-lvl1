@@ -13,6 +13,7 @@ function playBrainCalc(string $name)
     do {
         $number1 = rand(1, 20);
         $number2 = rand(1, 20);
+        $rightAnswer = 0;
         $operationIndex = rand(0, 2);
         $expression = "$number1 $operation[$operationIndex] $number2";
         line("Question: %s", $expression);
