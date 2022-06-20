@@ -5,7 +5,7 @@ namespace Src\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function playBrainCalc($name)
+function playBrainCalc(string: $name)
 {
     $operation = ['+', '-', '*'];
     line("What is the result of the expression?");
@@ -28,7 +28,7 @@ function playBrainCalc($name)
                 break;
         }
         $answer = prompt('Your answer');
-        if ($answer == $rightAnswer) {
+        if ($answer == intval($rightAnswer)) {
             line('Correct!');
             $i++;
         } else {

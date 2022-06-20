@@ -5,7 +5,7 @@ namespace Src\Games\GCD;
 use function cli\line;
 use function cli\prompt;
 
-function playBrainGCD($name)
+function playBrainGCD(string: $name)
 {
     line("Find the greatest common divisor of given numbers.");
     $i = 0;

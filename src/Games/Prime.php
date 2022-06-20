@@ -5,7 +5,7 @@ namespace Src\Games\Prime;
 use function cli\line;
 use function cli\prompt;
 
-function playBrainPrime($name)
+function playBrainPrime(string: $name)
 {
     line('Answer "yes" if the number is prime. Otherwise answer "no".');
     $i = 0;

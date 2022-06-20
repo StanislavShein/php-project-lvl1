@@ -5,7 +5,7 @@ namespace Src\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 
-function playBrainProgression($name)
+function playBrainProgression(string: $name)
 {
     line("What number is missing in the progression?");
     $i = 0;
