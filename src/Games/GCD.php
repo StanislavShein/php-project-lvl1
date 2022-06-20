@@ -21,6 +21,7 @@ function playBrainGCD(string $name)
             $modulo2 = $number2 % $checkNumber;
             if ($modulo1 == 0 && $modulo2 == 0) {
                 $GCD = $checkNumber;
+                break;
             }
         }
         $answer = prompt('Your answer');
