@@ -1,6 +1,12 @@
 install: # установить зависимости
 	composer install
 
+validate: # публикация
+	composer validate
+
+lint: # запуск phpcs
+	composer exec --verbose phpcs -- --standard=PSR12 src bin
+
 brain-games: # запуск игры
 	./bin/brain-games
 
@@ -16,8 +22,5 @@ brain-gcd: # запуск игры "Наибольший общий делите
 brain-progression: # запуск игры "Арифметическая прогрессия"
 	./bin/brain-progression
 
-validate: # публикация
-	composer validate
-
-lint: # запуск phpcs
-	composer exec --verbose phpcs -- --standard=PSR12 src bin
+brain-prime: # запуск игры "Простое число"
+	./bin/brain-prime

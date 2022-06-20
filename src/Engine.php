@@ -6,6 +6,7 @@ use Src\Games\Even;
 use Src\Games\Calc;
 use Src\Games\GCD;
 use Src\Games\Progression;
+use Src\Games\Prime;
 
 use function cli\line;
 use function cli\prompt;
@@ -29,5 +30,7 @@ function play($game)
         case 'brain-progression':
             Progression\playBrainProgression($name);
             break;
+        case 'brain-prime':
+            Prime\playBrainPrime($name);
     }
 }

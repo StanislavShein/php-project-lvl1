@@ -36,7 +36,6 @@ function playBrainProgression($name)
     } while ($i < 3);
 
     if ($i == 3) {
-        line ("Congratulations, %s!", $name);
+        line("Congratulations, %s!", $name);
     }
 }
-
