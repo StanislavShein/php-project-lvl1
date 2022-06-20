@@ -32,6 +32,6 @@
 	    "bin/brain-calc",
 	    "bin/brain-gcd",
 	    "bin/brain-progression",
-        "bin/braim-prime"
+        "bin/brain-prime"
     ]
 }
