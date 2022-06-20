@@ -13,6 +13,9 @@ brain-calc: # запуск игры "Калькулятор"
 brain-gcd: # запуск игры "Наибольший общий делитель"
 	./bin/brain-gcd
 
+brain-progression: # запуск игры "Арифметическая прогрессия"
+	./bin/brain-progression
+
 validate: # публикация
 	composer validate
 

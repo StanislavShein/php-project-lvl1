@@ -7,3 +7,5 @@
 <a href="https://asciinema.org/a/4gtQAGXy2ciGKLtrtrXtFq1gF" target="_blank"><img src="https://asciinema.org/a/4gtQAGXy2ciGKLtrtrXtFq1gF.svg" /></a>
 Игра "НОД - Наибольший Общий Делитель":
 <a href="https://asciinema.org/a/63Mel2QsuFRk4SvDoqbOixnKT" target="_blank"><img src="https://asciinema.org/a/63Mel2QsuFRk4SvDoqbOixnKT.svg" /></a>
+Игра "Арифметическая прогрессия"
+<a href="https://asciinema.org/a/h3rvqDhjXrMrlhz0toKA8ydgk" target="_blank"><img src="https://asciinema.org/a/h3rvqDhjXrMrlhz0toKA8ydgk.svg" /></a>
