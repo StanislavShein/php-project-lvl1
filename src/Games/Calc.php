@@ -5,7 +5,7 @@ namespace Src\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function playBrainCalc(string: $name)
+function playBrainCalc(string $name)
 {
     $operation = ['+', '-', '*'];
     line("What is the result of the expression?");
