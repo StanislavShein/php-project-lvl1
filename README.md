@@ -18,7 +18,7 @@ $ make install
 ```sh
 $ make brain-even
 ```
-<a href="https://asciinema.org/a/hhBvs3hif0qVoY1gCvLC5z5Zy" target="_blank"><img src="https://asciinema.org/a/hhBvs3hif0qVoY1gCvLC5z5Zy.svg" /></a>
+<a href="https://asciinema.org/a/muZSrSkL9yc9ZTrCEX8aximZb" target="_blank"><img src="https://asciinema.org/a/muZSrSkL9yc9ZTrCEX8aximZb.svg" /></a>
 
 ## Игра "Калькулятор":
 
@@ -26,7 +26,7 @@ $ make brain-even
 $ make brain-calc
 ```
 
-<a href="https://asciinema.org/a/4gtQAGXy2ciGKLtrtrXtFq1gF" target="_blank"><img src="https://asciinema.org/a/4gtQAGXy2ciGKLtrtrXtFq1gF.svg" /></a>
+<a href="https://asciinema.org/a/ka5iNWsIrJpEwTQVnJZ0fWB1G" target="_blank"><img src="https://asciinema.org/a/ka5iNWsIrJpEwTQVnJZ0fWB1G.svg" /></a>
 
 ## Игра "НОД - Наибольший Общий Делитель":
 
@@ -34,7 +34,7 @@ $ make brain-calc
 $ make brain-gcd
 ```
 
-<a href="https://asciinema.org/a/63Mel2QsuFRk4SvDoqbOixnKT" target="_blank"><img src="https://asciinema.org/a/63Mel2QsuFRk4SvDoqbOixnKT.svg" /></a>
+<a href="https://asciinema.org/a/wnn3IR4WFCOzIm7ERwyI41o3e" target="_blank"><img src="https://asciinema.org/a/wnn3IR4WFCOzIm7ERwyI41o3e.svg" /></a>
 
 ## Игра "Арифметическая прогрессия"
 
@@ -42,7 +42,7 @@ $ make brain-gcd
 $ make brain-progression
 ```
 
-<a href="https://asciinema.org/a/h3rvqDhjXrMrlhz0toKA8ydgk" target="_blank"><img src="https://asciinema.org/a/h3rvqDhjXrMrlhz0toKA8ydgk.svg" /></a>
+<a href="https://asciinema.org/a/uA6P6GN81obrZL7lKgcRMigTm" target="_blank"><img src="https://asciinema.org/a/uA6P6GN81obrZL7lKgcRMigTm.svg" /></a>
 
 ## Игра "Простое число"
 
@@ -50,4 +50,4 @@ $ make brain-progression
 $ make brain-prime
 ```
 
-<a href="https://asciinema.org/a/10sV85r9dqPd53ow16tlEGmxV" target="_blank"><img src="https://asciinema.org/a/10sV85r9dqPd53ow16tlEGmxV.svg" /></a>
+<a href="https://asciinema.org/a/CuLLlxBF9KYpz1DwaY7Znfl5A" target="_blank"><img src="https://asciinema.org/a/CuLLlxBF9KYpz1DwaY7Znfl5A.svg" /></a>
