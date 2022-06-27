@@ -6,6 +6,9 @@ validate: # публикация
 
 lint: # запуск phpcs
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+	
+test-coverage: # запуск phpunit tests
+	composer exec --verbose phpunit tests -- --coverage-clover build/logs/clover.xml
 
 brain-games: # запуск игры
 	./bin/brain-games
