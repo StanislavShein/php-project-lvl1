@@ -9,7 +9,7 @@ use function cli\prompt;
 
 function play()
 {
-    Engine\showGreeting($name);
+    $name = Engine\showGreeting();
     $operation = ['+', '-', '*'];
     line("What is the result of the expression?");
     $i = 0;

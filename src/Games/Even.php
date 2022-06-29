@@ -9,7 +9,7 @@ use function cli\prompt;
 
 function play()
 {
-    Engine\showGreeting($name);
+    $name = Engine\showGreeting();
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $i = 0;
     do {

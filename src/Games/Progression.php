@@ -9,7 +9,7 @@ use function cli\prompt;
 
 function play()
 {
-    Engine\showGreeting($name);
+    $name = Engine\showGreeting();
     line("What number is missing in the progression?");
     $i = 0;
     do {

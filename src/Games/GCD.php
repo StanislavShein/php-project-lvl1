@@ -9,7 +9,7 @@ use function cli\prompt;
 
 function play()
 {
-    Engine\showGreeting($name);
+    $name = Engine\showGreeting();
     line("Find the greatest common divisor of given numbers.");
     $i = 0;
     do {
