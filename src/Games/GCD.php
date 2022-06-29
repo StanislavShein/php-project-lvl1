@@ -27,6 +27,7 @@ function play()
                 break;
             }
         }
+        $rightAnswer = strval($rightAnswer);
         Engine\checkAnswer($rightAnswer, $i, $name);
     } while ($i < 3);
 }

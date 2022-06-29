@@ -27,6 +27,7 @@ function play()
             print_r("{$number} ");
         }
         print_r("\n");
+        $rightAnswer = strval($rightAnswer);
         Engine\checkAnswer($rightAnswer, $i, $name);
     } while ($i < 3);
 }
