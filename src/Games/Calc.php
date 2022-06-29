@@ -2,11 +2,14 @@
 
 namespace Src\Games\Calc;
 
+use Src\Engine;
+
 use function cli\line;
 use function cli\prompt;
 
-function playBrainCalc(string $name)
+function play()
 {
+    Engine\showGreeting($name);
     $operation = ['+', '-', '*'];
     line("What is the result of the expression?");
     $i = 0;
@@ -28,18 +31,6 @@ function playBrainCalc(string $name)
                 $rightAnswer = $number1 * $number2;
                 break;
         }
-        $answer = prompt('Your answer');
-        if ($answer == intval($rightAnswer)) {
-            line('Correct!');
-            $i++;
-        } else {
-            print_r("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'. \n");
-            line("Let's try again, %s!", $name);
-            break;
-        }
+        Engine\checkAnswer($rightAnswer, $i, $name);
     } while ($i < 3);
-
-    if ($i == 3) {
-        line("Congratulations, %s!", $name);
-    }
 }

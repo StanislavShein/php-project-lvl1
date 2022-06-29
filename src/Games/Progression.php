@@ -2,11 +2,14 @@
 
 namespace Src\Games\Progression;
 
+use Src\Engine;
+
 use function cli\line;
 use function cli\prompt;
 
-function playBrainProgression(string $name)
+function play()
 {
+    Engine\ShowGreeting($name);
     line("What number is missing in the progression?");
     $i = 0;
     do {
@@ -24,18 +27,6 @@ function playBrainProgression(string $name)
             print_r("{$number} ");
         }
         print_r("\n");
-        $answer = prompt('Your answer');
-        if ($answer == $rightAnswer) {
-            line('Correct!');
-            $i++;
-        } else {
-            print_r("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'. \n");
-            line("Let's try again, %s!", $name);
-            break;
-        }
+        Engine\checkAnswer($rightAnswer, $i, $name);
     } while ($i < 3);
-
-    if ($i == 3) {
-        line("Congratulations, %s!", $name);
-    }
 }
