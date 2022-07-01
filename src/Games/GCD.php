@@ -27,7 +27,7 @@ function play(int $numberOfRounds)
                 break;
             }
         }
-        (string) $rightAnswer;
+        $rightAnswer = (string) $rightAnswer;
         Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
     } while ($i < $numberOfRounds);
 }
