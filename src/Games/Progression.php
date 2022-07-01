@@ -7,10 +7,10 @@ use Brain\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function play($numberOfRounds)
+function play(int $numberOfRounds)
 {
-    $name = Engine\showGreeting();
-    line("What number is missing in the progression?");
+    $task = 'What number is missing in the progression?';
+    $name = Engine\showGreeting($task);
     $i = 0;
     do {
         $array = [];

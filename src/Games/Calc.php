@@ -9,9 +9,9 @@ use function cli\prompt;
 
 function play(int $numberOfRounds)
 {
-    $name = Engine\showGreeting();
+    $task = 'What is the result of the expression?';
+    $name = Engine\showGreeting($task);
     $operation = ['+', '-', '*'];
-    line("What is the result of the expression?");
     $i = 0;
     do {
         $number1 = rand(1, 20);

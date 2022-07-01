@@ -9,8 +9,8 @@ use function cli\prompt;
 
 function play(int $numberOfRounds)
 {
-    $name = Engine\showGreeting();
-    line('Answer "yes" if the number is prime. Otherwise answer "no".');
+    $task = 'Answer "yes" if the number is prime. Otherwise answer "no".';
+    $name = Engine\showGreeting($task);
     $i = 0;
     do {
         $number = rand(2, 200);
