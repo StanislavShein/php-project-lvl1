@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Games\Prime;
+namespace Brain\Games\Prime;
 
-use Src\Engine;
+use Brain\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-function play()
+function play(int $numberOfRounds)
 {
     $name = Engine\showGreeting();
     line('Answer "yes" if the number is prime. Otherwise answer "no".');
@@ -21,6 +21,6 @@ function play()
             }
         }
         line("Question: %s", $number);
-        Engine\checkAnswer($rightAnswer, $i, $name);
-    } while ($i < 3);
+        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
+    } while ($i < $numberOfRounds);
 }

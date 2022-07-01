@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Games\Even;
+namespace Brain\Games\Even;
 
-use Src\Engine;
+use Brain\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-function play()
+function play(int $numberOfRounds)
 {
     $name = Engine\showGreeting();
     line('Answer "yes" if the number is even, otherwise answer "no".');
@@ -16,6 +16,6 @@ function play()
         $number = rand(1, 20);
         line("Question: %s", $number);
         $number % 2 === 0 ? $rightAnswer = 'yes' : $rightAnswer = 'no';
-        Engine\checkAnswer($rightAnswer, $i, $name);
-    } while ($i < 3);
+        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
+    } while ($i < $numberOfRounds);
 }

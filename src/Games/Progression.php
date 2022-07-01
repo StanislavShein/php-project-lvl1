@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Games\Progression;
+namespace Brain\Games\Progression;
 
-use Src\Engine;
+use Brain\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-function play()
+function play($numberOfRounds)
 {
     $name = Engine\showGreeting();
     line("What number is missing in the progression?");
@@ -28,6 +28,6 @@ function play()
         }
         print_r("\n");
         $rightAnswer = strval($rightAnswer);
-        Engine\checkAnswer($rightAnswer, $i, $name);
-    } while ($i < 3);
+        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
+    } while ($i < $numberOfRounds);
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Games\GCD;
+namespace Brain\Games\GCD;
 
-use Src\Engine;
+use Brain\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-function play()
+function play(int $numberOfRounds)
 {
     $name = Engine\showGreeting();
     line("Find the greatest common divisor of given numbers.");
@@ -28,6 +28,6 @@ function play()
             }
         }
         $rightAnswer = strval($rightAnswer);
-        Engine\checkAnswer($rightAnswer, $i, $name);
-    } while ($i < 3);
+        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
+    } while ($i < $numberOfRounds);
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Games\Calc;
+namespace Brain\Games\Calc;
 
-use Src\Engine;
+use Brain\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-function play()
+function play(int $numberOfRounds)
 {
     $name = Engine\showGreeting();
     $operation = ['+', '-', '*'];
@@ -32,6 +32,6 @@ function play()
                 break;
         }
         $rightAnswer = strval($rightAnswer);
-        Engine\checkAnswer($rightAnswer, $i, $name);
-    } while ($i < 3);
+        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
+    } while ($i < $numberOfRounds);
 }
