@@ -22,7 +22,7 @@ function play(int $numberOfRounds)
         for ($checkNumber = $least; $checkNumber > 1; $checkNumber--) {
             $modulo1 = $number1 % $checkNumber;
             $modulo2 = $number2 % $checkNumber;
-            if ($modulo1 == 0 && $modulo2 == 0) {
+            if ($modulo1 === 0 && $modulo2 === 0) {
                 $rightAnswer = $checkNumber;
                 break;
             }

@@ -6,7 +6,7 @@
 
 ## Requirements
 
-* PHP
+* PHP >= 7.4
 * Composer
 * Make
 

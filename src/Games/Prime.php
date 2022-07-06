@@ -16,7 +16,7 @@ function play(int $numberOfRounds)
         $number = rand(2, 200);
         $rightAnswer = 'yes';
         for ($check = $number - 1; $check > 1; $check--) {
-            if ($number % $check == 0) {
+            if ($number % $check === 0) {
                 $rightAnswer = 'no';
             }
         }
