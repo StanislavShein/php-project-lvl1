@@ -6,7 +6,7 @@ use Brain\Engine;
 
 use const Brain\Engine\NUMBER_OF_ROUNDS;
 
-function isEven(int $number)
+function isEven(int $number): bool
 {
     return $number % 2 === 0;
 }
