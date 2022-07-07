@@ -25,7 +25,8 @@ function playGame(string $task, array $gameData): void
                 line("Congratulations, %s!", $name);
             }
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!", $answer, $rightAnswer, $name);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.\n", $answer, $rightAnswer);
+            line("Let's try again, %s!", $name);
             return;
         }
     }
