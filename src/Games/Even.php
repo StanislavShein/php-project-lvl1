@@ -5,7 +5,6 @@ namespace Brain\Games\Even;
 use Brain\Engine;
 
 use function cli\line;
-use function cli\prompt;
 
 function isEven(int $number)
 {

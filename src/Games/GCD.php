@@ -5,7 +5,6 @@ namespace Brain\Games\GCD;
 use Brain\Engine;
 
 use function cli\line;
-use function cli\prompt;
 
 function play(int $numberOfRounds)
 {

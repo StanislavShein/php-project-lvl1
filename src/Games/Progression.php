@@ -5,7 +5,6 @@ namespace Brain\Games\Progression;
 use Brain\Engine;
 
 use function cli\line;
-use function cli\prompt;
 
 function play(int $numberOfRounds)
 {
@@ -22,11 +21,8 @@ function play(int $numberOfRounds)
         }
         $rightAnswer = $array[$hiddenIndex];
         $array[$hiddenIndex] = "..";
-        print_r("Question: ");
-        foreach ($array as $number) {
-            print_r("{$number} ");
-        }
-        print_r("\n");
+        $progression = implode(' ', $array);
+        line("Question: %s", $progression);
         $rightAnswer = strval($rightAnswer);
         Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
     } while ($i < $numberOfRounds);
