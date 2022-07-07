@@ -29,5 +29,4 @@ function playGame(string $task, array $gameData): void
             return;
         }
     }
-    
 }

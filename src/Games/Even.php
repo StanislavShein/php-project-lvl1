@@ -3,6 +3,7 @@
 namespace Brain\Games\Even;
 
 use Brain\Engine;
+
 use const Brain\Engine\NUMBER_OF_ROUNDS;
 
 function isEven(int $number)

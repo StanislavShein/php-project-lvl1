@@ -3,9 +3,10 @@
 namespace Brain\Games\Progression;
 
 use Brain\Engine;
+
 use const Brain\Engine\NUMBER_OF_ROUNDS;
 
-function play():void
+function play(): void
 {
     $task = 'What number is missing in the progression?';
     $gameData = [];
