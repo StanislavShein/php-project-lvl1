@@ -3,22 +3,19 @@
 namespace Brain\Games\Calc;
 
 use Brain\Engine;
+use const Brain\Engine\NUMBER_OF_ROUNDS;
 
-use function cli\line;
-
-function play(int $numberOfRounds)
+function play(): void
 {
     $task = 'What is the result of the expression?';
-    $name = Engine\showGreeting($task);
-    $operation = ['+', '-', '*'];
-    $i = 0;
-    do {
+    $gameData = [];
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         $number1 = rand(1, 20);
         $number2 = rand(1, 20);
         $rightAnswer = 0;
+        $operation = ['+', '-', '*'];
         $operationIndex = rand(0, 2);
         $expression = "$number1 $operation[$operationIndex] $number2";
-        line("Question: %s", $expression);
         switch ($operation[$operationIndex]) {
             case '+':
                 $rightAnswer = $number1 + $number2;
@@ -31,6 +28,7 @@ function play(int $numberOfRounds)
                 break;
         }
         $rightAnswer = strval($rightAnswer);
-        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
-    } while ($i < $numberOfRounds);
+        $gameData[] = ['question' => $expression, 'rightAnswer' => $rightAnswer];
+    }
+    Engine\playGame($task, $gameData);
 }

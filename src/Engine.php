@@ -5,27 +5,29 @@ namespace Brain\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function showGreeting(string $task): string
+const NUMBER_OF_ROUNDS = 3;
+
+function playGame(string $task, array $gameData): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($task);
-    return $name;
-}
-
-function checkAnswer(string $rightAnswer, int &$i, string $name, int $numberOfRounds)
-{
-    $answer = prompt('Your answer ');
-    if ($answer === $rightAnswer) {
-        line('Correct!');
-        $i++;
-    } else {
-        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $rightAnswer);
-        line("Let's try again, %s!", $name);
-        $i = $numberOfRounds + 1;
+    $roundNumber = 0;
+    foreach ($gameData as $round) {
+        $question = $round['question'];
+        $rightAnswer = $round['rightAnswer'];
+        $answer = prompt("Question: {$question}\nYour answer");
+        if ($answer === $rightAnswer) {
+            line("Correct!");
+            $roundNumber++;
+            if ($roundNumber === 3) {
+                line("Congratulations, %s!", $name);
+            }
+        } else {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!", $answer, $rightAnswer, $name);
+            return;
+        }
     }
-    if ($i === $numberOfRounds) {
-        line("Congratulations, %s!", $name);
-    }
+    
 }

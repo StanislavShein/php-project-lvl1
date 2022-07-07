@@ -3,15 +3,13 @@
 namespace Brain\Games\Prime;
 
 use Brain\Engine;
+use const Brain\Engine\NUMBER_OF_ROUNDS;
 
-use function cli\line;
-
-function play(int $numberOfRounds)
+function play(): void
 {
     $task = 'Answer "yes" if the number is prime. Otherwise answer "no".';
-    $name = Engine\showGreeting($task);
-    $i = 0;
-    do {
+    $gameData = [];
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         $number = rand(2, 200);
         $rightAnswer = 'yes';
         for ($check = $number - 1; $check > 1; $check--) {
@@ -19,7 +17,7 @@ function play(int $numberOfRounds)
                 $rightAnswer = 'no';
             }
         }
-        line("Question: %s", $number);
-        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
-    } while ($i < $numberOfRounds);
+        $gameData[] = ['question' => $number, 'rightAnswer' => $rightAnswer];
+    }
+    Engine\playGame($task, $gameData);
 }

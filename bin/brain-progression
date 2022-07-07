@@ -13,6 +13,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$numberOfRounds = 3;
-
-Progression\play($numberOfRounds);
+Progression\play();

@@ -3,19 +3,16 @@
 namespace Brain\Games\GCD;
 
 use Brain\Engine;
+use const Brain\Engine\NUMBER_OF_ROUNDS;
 
-use function cli\line;
-
-function play(int $numberOfRounds)
+function play(): void
 {
     $task = 'Find the greatest common divisor of given numbers.';
-    $name = Engine\showGreeting($task);
-    $i = 0;
-    do {
+    $gameData = [];
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         $number1 = rand(1, 50);
         $number2 = rand(1, 50);
         $numbers = "$number1 $number2";
-        line("Question: %s", $numbers);
         $least = min($number1, $number2);
         $rightAnswer = 1;
         for ($checkNumber = $least; $checkNumber > 1; $checkNumber--) {
@@ -27,6 +24,7 @@ function play(int $numberOfRounds)
             }
         }
         $rightAnswer = (string) $rightAnswer;
-        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
-    } while ($i < $numberOfRounds);
+        $gameData[] = ['question' => $numbers, 'rightAnswer' => $rightAnswer];
+    }
+    Engine\playGame($task, $gameData);
 }

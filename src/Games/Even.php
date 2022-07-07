@@ -3,23 +3,21 @@
 namespace Brain\Games\Even;
 
 use Brain\Engine;
-
-use function cli\line;
+use const Brain\Engine\NUMBER_OF_ROUNDS;
 
 function isEven(int $number)
 {
     return $number % 2 === 0;
 }
 
-function play(int $numberOfRounds)
+function play(): void
 {
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $name = Engine\showGreeting($task);
-    $i = 0;
-    do {
+    $gameData = [];
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         $number = rand(1, 20);
-        line("Question: %s", $number);
         $rightAnswer = isEven($number) ? 'yes' : 'no';
-        Engine\checkAnswer($rightAnswer, $i, $name, $numberOfRounds);
-    } while ($i < $numberOfRounds);
+        $gameData[] = ['question' => $number, 'rightAnswer' => $rightAnswer];
+    }
+    Engine\playGame($task, $gameData);
 }
