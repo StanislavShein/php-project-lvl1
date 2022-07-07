@@ -6,7 +6,7 @@
 
 ## Requirements
 
-* PHP
+* PHP >= 7.4
 * Composer
 * Make
 
@@ -15,7 +15,7 @@
 ```sh
 $ git clone https://github.com/StanislavShein/php-project-lvl1.git
 
-$ cd php-project-lvl1
+$ cd php-project-lvl1/
 
 $ make install
 ```
