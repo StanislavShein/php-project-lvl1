@@ -18,7 +18,7 @@ function findGCD(int $number1, int $number2): string
             break;
         }
     }
-    (string) $result;
+    $result = (string) $result;
     return $result;
 }
 

@@ -10,17 +10,17 @@ function findOperationResult(string $operation, int $number1, int $number2): str
 {
     switch ($operation) {
         case '+':
-            $rightAnswer = $number1 + $number2;
+            $result = $number1 + $number2;
             break;
         case '-':
-            $rightAnswer = $number1 - $number2;
+            $result = $number1 - $number2;
             break;
         case '*':
-            $rightAnswer = $number1 * $number2;
+            $result = $number1 * $number2;
             break;
     }
-    (string) $rightAnswer;
-    return $rightAnswer;
+    $result = (string) $result;
+    return $result;
 }
 
 function play(): void
