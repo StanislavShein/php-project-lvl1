@@ -19,7 +19,7 @@ function findOperationResult(string $operation, int $number1, int $number2): str
             $result = $number1 * $number2;
             break;
     }
-    $result = (string) $result;
+    $result = (string)$result;
     return $result;
 }
 
