@@ -6,7 +6,7 @@ use Brain\Engine;
 
 use const Brain\Engine\NUMBER_OF_ROUNDS;
 
-function getOperationResult(string $operation, int $number1, int $number2): string
+function findOperationResult(string $operation, int $number1, int $number2): string
 {
     switch ($operation) {
         case '+':
@@ -19,7 +19,7 @@ function getOperationResult(string $operation, int $number1, int $number2): stri
             $rightAnswer = $number1 * $number2;
             break;
     }
-    $rightAnswer = strval($rightAnswer);
+    (string) $rightAnswer;
     return $rightAnswer;
 }
 
@@ -33,7 +33,7 @@ function play(): void
         $operationArray = ['+', '-', '*'];
         $operation = $operationArray[rand(0, 2)];
         $expression = "$number1 $operation $number2";
-        $rightAnswer = getOperationResult($operation, $number1, $number2);
+        $rightAnswer = findOperationResult($operation, $number1, $number2);
         $gameData[] = ['question' => $expression, 'rightAnswer' => $rightAnswer];
     }
     Engine\playGame($task, $gameData);
