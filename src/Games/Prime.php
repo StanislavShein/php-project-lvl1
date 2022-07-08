@@ -24,7 +24,7 @@ function play(): void
     $task = 'Answer "yes" if the number is prime. Otherwise answer "no".';
     $gameData = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
-        $number = rand(1, 200);
+        $number = rand(1, 5);
         if (isPrime($number)) {
             $rightAnswer = 'yes';
         } else {
