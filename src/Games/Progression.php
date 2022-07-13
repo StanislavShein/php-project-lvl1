@@ -16,7 +16,7 @@ function play(): void
         $progression[0] = rand(1, 50);
         $delta = rand(1, 10);
         for ($index = 0; $index < 10; $index++) {
-            $progression[] = (int) $progression[$index] + $delta;
+            $progression[] = $progression[$index] + $delta;
         }
 
         $hiddenIndex = rand(0, 9);

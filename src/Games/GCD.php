@@ -14,7 +14,6 @@ function findGCD(int $number1, int $number2): string
     for ($checkNumber = $least; $checkNumber > 1; $checkNumber--) {
         if ($number1 % $checkNumber === 0 && $number2 % $checkNumber === 0) {
             return (string) $checkNumber;
-            break;
         }
     }
 

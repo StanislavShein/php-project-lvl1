@@ -12,14 +12,11 @@ function findOperationResult(string $operation, int $number1, int $number2): str
 {
     switch ($operation) {
         case '+':
-            return $number1 + $number2;
-            break;
+            return (string) ($number1 + $number2);
         case '-':
-            return $number1 - $number2;
-            break;
+            return (string) ($number1 - $number2);
         case '*':
             return $number1 * $number2;
-            break;
     }
 }
 
