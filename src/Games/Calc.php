@@ -17,6 +17,8 @@ function findOperationResult(string $operation, int $number1, int $number2): str
             return (string) ($number1 - $number2);
         case '*':
             return (string) ($number1 * $number2);
+        default:
+            return '';
     }
 }
 
