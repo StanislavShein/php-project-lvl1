@@ -14,20 +14,22 @@ function playGame(string $task, array $gameData): void
     line("Hello, %s!", $name);
     line($task);
     $roundNumber = 0;
+
     foreach ($gameData as $round) {
         $question = $round['question'];
         $rightAnswer = $round['rightAnswer'];
-        $answer = prompt("Question: {$question}\nYour answer");
-        if ($answer === $rightAnswer) {
-            line("Correct!");
-            $roundNumber++;
-            if ($roundNumber === 3) {
-                line("Congratulations, %s!", $name);
-            }
-        } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.\n", $answer, $rightAnswer);
+        line("Question: {$question}");
+        $answer = prompt("Your answer");
+
+        if ($answer !== $rightAnswer) {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $rightAnswer);
             line("Let's try again, %s!", $name);
             return;
+        } else {
+            line("Correct!");
+            $roundNumber++;
         }
     }
+
+    line("Congratulations, %s!", $name);
 }
