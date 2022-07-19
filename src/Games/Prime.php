@@ -14,7 +14,15 @@ function isPrime(int $number): bool
         return false;
     }
 
-    for ($check = 2; $check <= sqrt($number); $check++) {
+    if ($number === 2 || $number === 3) {
+        return true;
+    }
+
+    if ($number % 2 === 0) {
+        return false;
+    }
+
+    for ($check = 3; $check <= sqrt($number); $check+=2) {
         if ($number % $check === 0) {
             return false;
         }
@@ -28,7 +36,7 @@ function play(): void
     $gameData = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         $number = rand(1, 200);
-        isPrime($number) ? $rightAnswer = 'yes' : $rightAnswer = 'no';
+        $rightAnswer = isPrime($number) ? 'yes' : 'no';
         $gameData[] = ['question' => $number, 'rightAnswer' => $rightAnswer];
     }
 

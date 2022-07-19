@@ -15,11 +15,12 @@ function play(): void
         $progression = [];
         $progression[0] = rand(1, 50);
         $delta = rand(1, 10);
-        for ($index = 0; $index < 10; $index++) {
+        $progressionLength = 10;
+        for ($index = 0; $index < $progressionLength; $index++) {
             $progression[] = $progression[$index] + $delta;
         }
 
-        $hiddenIndex = rand(0, 9);
+        $hiddenIndex = rand(0, $progressionLength - 1);
         $rightAnswer = $progression[$hiddenIndex];
         $progression[$hiddenIndex] = "..";
 

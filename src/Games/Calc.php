@@ -18,7 +18,7 @@ function findOperationResult(string $operation, int $number1, int $number2): str
         case '*':
             return (string) ($number1 * $number2);
         default:
-            return '';
+            throw new \Exception('Error!');
     }
 }
 
@@ -29,8 +29,8 @@ function play(): void
         $number1 = rand(1, 20);
         $number2 = rand(1, 20);
 
-        $operationArray = ['+', '-', '*'];
-        $operation = $operationArray[rand(0, 2)];
+        $operations = ['+', '-', '*'];
+        $operation = $operations[rand(0, 2)];
 
         $expression = "$number1 $operation $number2";
         $rightAnswer = findOperationResult($operation, $number1, $number2);
