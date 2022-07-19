@@ -13,7 +13,6 @@ function playGame(string $task, array $gameData): void
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($task);
-    $roundNumber = 0;
 
     foreach ($gameData as $round) {
         $question = $round['question'];
@@ -25,10 +24,9 @@ function playGame(string $task, array $gameData): void
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $rightAnswer);
             line("Let's try again, %s!", $name);
             return;
-        } else {
-            line("Correct!");
-            $roundNumber++;
         }
+
+        line("Correct!");
     }
 
     line("Congratulations, %s!", $name);
