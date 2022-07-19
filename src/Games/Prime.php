@@ -22,7 +22,7 @@ function isPrime(int $number): bool
         return false;
     }
 
-    for ($check = 3; $check <= sqrt($number); $check+=2) {
+    for ($check = 3; $check <= sqrt($number); $check += 2) {
         if ($number % $check === 0) {
             return false;
         }
