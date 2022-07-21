@@ -8,15 +8,15 @@ use const Brain\Engine\NUMBER_OF_ROUNDS;
 
 const TASK = 'What is the result of the expression?';
 
-function findOperationResult(string $operation, int $number1, int $number2): string
+function findOperationResult(string $operation, int $number1, int $number2): int
 {
     switch ($operation) {
         case '+':
-            return (string) ($number1 + $number2);
+            return ($number1 + $number2);
         case '-':
-            return (string) ($number1 - $number2);
+            return ($number1 - $number2);
         case '*':
-            return (string) ($number1 * $number2);
+            return ($number1 * $number2);
         default:
             throw new \Exception('Error!');
     }
@@ -33,7 +33,7 @@ function play(): void
         $operation = $operations[rand(0, 2)];
 
         $expression = "$number1 $operation $number2";
-        $rightAnswer = findOperationResult($operation, $number1, $number2);
+        $rightAnswer = (string) findOperationResult($operation, $number1, $number2);
         $gameData[] = ['question' => $expression, 'rightAnswer' => $rightAnswer];
     }
 
