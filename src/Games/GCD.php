@@ -26,9 +26,9 @@ function play(): void
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         $number1 = rand(1, 50);
         $number2 = rand(1, 50);
-        $numbers = "$number1 $number2";
+        $question = "$number1 $number2";
         $rightAnswer = findGCD($number1, $number2);
-        $gameData[] = ['question' => $numbers, 'rightAnswer' => $rightAnswer];
+        $gameData[] = ['question' => $question, 'rightAnswer' => $rightAnswer];
     }
 
     Engine\playGame(TASK, $gameData);
