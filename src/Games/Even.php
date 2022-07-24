@@ -17,7 +17,7 @@ function play(): void
 {
     $gameData = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
-        $number = rand(1, 20);
+        $number = rand(1, 50);
         $rightAnswer = isEven($number) ? 'yes' : 'no';
         $gameData[] = ['question' => $number, 'rightAnswer' => $rightAnswer];
     }
